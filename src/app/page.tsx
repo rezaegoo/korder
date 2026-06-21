@@ -20,6 +20,7 @@ interface OrderData {
   noHp: string
   namaBarang: string
   nilaiPembayaran: string
+  ekspedisi: string
   ongkir: string
   jenisPembayaran: string
   originalIndex: number
@@ -75,7 +76,7 @@ export default function Home() {
     const idx = index !== undefined ? index : order.originalIndex
     const displayNumber = idx + 1 // Start from #1 instead of #0
     const separator = '='.repeat(27) // Always 27 equal signs
-    return `/NO RESI : ${order.noResi}\nNAMA : ${order.nama}\nALAMAT : ${order.alamat}\nKECAMATAN : ${order.kecamatan}\nKOTA : ${order.kota}\nPROVINSI : ${order.provinsi}\nKODEPOS : ${order.kodepos}\nNO HP : ${order.noHp}\nNAMA BARANG : ${order.namaBarang}\nNILAI PEMBAYARAN : ${order.nilaiPembayaran}\nONGKIR : ${order.ongkir}\nJENIS PEMBAYARAN : ${order.jenisPembayaran}\n${separator}${displayNumber}`
+    return `/NO RESI : ${order.noResi}\nNAMA : ${order.nama}\nALAMAT : ${order.alamat}\nKECAMATAN : ${order.kecamatan}\nKOTA : ${order.kota}\nPROVINSI : ${order.provinsi}\nKODEPOS : ${order.kodepos}\nNO HP : ${order.noHp}\nNAMA BARANG : ${order.namaBarang}\nNILAI PEMBAYARAN : ${order.nilaiPembayaran}\nEKSPEDISI : ${order.ekspedisi}\nONGKIR : ${order.ongkir}\nJENIS PEMBAYARAN : ${order.jenisPembayaran}\n${separator}${displayNumber}`
   }
 
   const copyDuplicates = () => {
