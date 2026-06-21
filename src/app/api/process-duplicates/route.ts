@@ -11,6 +11,7 @@ interface OrderData {
   noHp: string
   namaBarang: string
   nilaiPembayaran: string
+  ekspedisi: string
   ongkir: string
   jenisPembayaran: string
   originalIndex: number
@@ -80,6 +81,9 @@ function parseOrderData(rawData: string): OrderData[] {
         case 'hargabarang':
           order.nilaiPembayaran = value
           break
+        case 'ekspedisi':
+          order.ekspedisi = value
+          break
         case 'ongkir':
           order.ongkir = value
           break
@@ -101,6 +105,7 @@ function parseOrderData(rawData: string): OrderData[] {
       if (!order.kodepos) order.kodepos = ''
       if (!order.namaBarang) order.namaBarang = ''
       if (!order.nilaiPembayaran) order.nilaiPembayaran = '0'
+      if (!order.ekspedisi) order.ekspedisi = ''
       if (!order.ongkir) order.ongkir = '0'
       if (!order.jenisPembayaran) order.jenisPembayaran = ''
 
